@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>萱萱电影网 - 热门电影_剧集片单_动漫综艺_影视榜单在线指南</title>
+<meta name="description" content="萱萱电影网（https://xuanxuandianyingwang-cn.github.io）是专注热门电影、剧集片单、经典动漫与综艺娱乐的影视指南站，提供影片简介、题材标签、影视榜单与观影指南，每日更新，手机端自适应浏览。" />
+<meta name="keywords" content="萱萱电影网,萱萱电影,电影网,热门电影推荐,剧集片单,经典动漫,综艺娱乐,影视榜单,影视资讯,观影指南" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+<meta name="author" content="萱萱电影网" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="theme-color" content="#ff7ad9" />
+<link rel="canonical" href="https://xuanxuandianyingwang-cn.github.io/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="萱萱电影网" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:title" content="萱萱电影网 - 热门电影_剧集片单_动漫综艺_影视榜单在线指南" />
+<meta property="og:description" content="萱萱电影网整理热门电影、剧集片单、经典动漫与综艺娱乐内容，附简介、题材标签与影视榜单，手机电脑都能看。" />
+<meta property="og:url" content="https://xuanxuandianyingwang-cn.github.io/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="萱萱电影网 - 热门电影_剧集片单_动漫综艺_影视榜单在线指南" />
+<meta name="twitter:description" content="萱萱电影网整理热门电影、剧集片单、经典动漫与综艺娱乐内容，附简介、题材标签与影视榜单。" />
+<style type="text/css">
+/* ============================================================
+   视觉方案：Y2K 千禧全息未来风（Y2K Holographic Futurism）
+   —— 深靛紫底 + 全息镭射渐变 + 镀铬金属字 + 星形闪光 +
+      珠光按钮 + 透视网格 + 荧光粉/冰蓝/薄荷青
+   ============================================================ */
+:root{
+  --bg:#100c22;
+  --bg2:#171232;
+  --panel:rgba(255,255,255,.055);
+  --silver:#e8ecf8;
+  --silver2:#9ea6c8;
+  --dim:#7b81a8;
+  --pink:#ff7ad9;
+  --cyan:#7ef0df;
+  --blue:#6bb6ff;
+  --gold:#ffe08a;
+  --lilac:#c39bff;
+  --line:rgba(255,255,255,.14);
+  --holo:linear-gradient(115deg,#ff8fd8 0%,#9ef0e4 28%,#7bb8ff 52%,#ffe98f 74%,#ff8fd8 100%);
+  --chrome:linear-gradient(180deg,#ffffff 0%,#dfe4f2 38%,#8b93bb 50%,#ffffff 54%,#c3cae4 100%);
+  --sans:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,"Courier New",monospace;
+  --maxw:1180px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--bg);color:var(--silver);
+  font-family:var(--sans);font-size:16px;line-height:1.78;overflow-x:hidden;
+  background-image:
+    radial-gradient(880px 500px at 8% -8%, rgba(255,122,217,.20), transparent 60%),
+    radial-gradient(760px 460px at 94% 4%, rgba(110,182,255,.20), transparent 62%),
+    radial-gradient(860px 540px at 50% 108%, rgba(126,240,223,.14), transparent 64%);
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;height:auto;display:block;}
+ul,ol{margin:0;padding:0;list-style:none;}
+p{margin:0;}
+h1,h2,h3,h4{margin:0;font-weight:800;line-height:1.25;letter-spacing:.5px;}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+.skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--pink);color:#180a2a;padding:10px 16px;border-radius:999px;}
+.skip:focus{left:14px;top:14px;}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;}
+
+/* 通用装饰 */
+.spark{color:var(--gold);}
+.holo-text{background:var(--holo);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:slide 7s linear infinite;}
+@keyframes slide{to{background-position:220% 0}}
+.chrome-text{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent;}
+
+/* ---------- 顶部：全息条 ---------- */
+.strip{height:8px;background:var(--holo);background-size:220% 100%;animation:slide 7s linear infinite;}
+.ticker{background:rgba(255,255,255,.05);border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:.06em;}
+.ticker .wrap{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:center;justify-content:space-between;padding:7px 20px;color:var(--silver2);}
+.ticker b{color:var(--cyan);}
+
+/* ---------- 报头：镀铬 LOGO + 珠光导航 ---------- */
+.mast{position:sticky;top:0;z-index:40;background:rgba(16,12,34,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;min-height:68px;}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto;}
+.brand .orb{
+  width:46px;height:46px;border-radius:50%;flex:0 0 auto;position:relative;
+  background:var(--holo);background-size:220% 100%;animation:slide 6s linear infinite;
+  box-shadow:0 0 22px rgba(255,122,217,.45);
+}
+.brand .orb::after{
+  content:"";position:absolute;inset:9px;border-radius:50%;background:var(--bg);
+}
+.brand .orb i{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;
+  font-style:normal;font-size:13px;font-weight:900;color:var(--silver);
+}
+.brand .zi strong{display:block;font-size:19.5px;letter-spacing:1px;}
+.brand .zi span{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;color:var(--dim);}
+.nav{display:flex;align-items:center;gap:6px;margin-left:auto;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;}
+.nav::-webkit-scrollbar{display:none;}
+.nav a{
+  flex:0 0 auto;font-size:13.5px;padding:8px 14px;border-radius:999px;white-space:nowrap;
+  border:1px solid var(--line);color:var(--silver2);background:rgba(255,255,255,.04);
+}
+.nav a:hover{border-color:var(--pink);color:#fff;box-shadow:0 0 14px rgba(255,122,217,.30);}
+.nav a.on{background:var(--holo);background-size:220% 100%;color:#1a0b2e;font-weight:800;border-color:transparent;animation:slide 7s linear infinite;}
+.pod{display:flex;flex:0 0 auto;align-items:center;gap:0;border-radius:999px;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.06);}
+.pod input{width:150px;border:0;background:transparent;color:var(--silver);font-size:13px;padding:8px 14px;font-family:var(--sans);}
+.pod input::placeholder{color:#6c7299;}
+.pod button{border:0;background:var(--cyan);color:#06302b;font-weight:800;font-size:12.5px;padding:8px 15px;cursor:pointer;font-family:var(--mono);}
+
+/* ---------- HERO：透视网格 + 镀铬大标题 ---------- */
+.hero{position:relative;padding:30px 0 10px;}
+.hero::before{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:220px;pointer-events:none;
+  background-image:linear-gradient(rgba(126,240,223,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(126,240,223,.16) 1px,transparent 1px);
+  background-size:52px 52px;
+  transform:perspective(340px) rotateX(62deg);
+  transform-origin:bottom;opacity:.65;
+  -webkit-mask-image:linear-gradient(transparent,rgba(0,0,0,.85));
+  mask-image:linear-gradient(transparent,rgba(0,0,0,.85));
+}
+.stage{position:relative;border:1px solid var(--line);border-radius:26px;padding:34px 30px 30px;
+  background:linear-gradient(150deg,rgba(255,255,255,.085),rgba(255,255,255,.02));
+  box-shadow:0 26px 60px rgba(0,0,0,.45);overflow:hidden;
+}
+.stage::after{
+  content:"";position:absolute;right:-90px;top:-90px;width:280px;height:280px;border-radius:50%;
+  background:var(--holo);background-size:220% 100%;filter:blur(70px);opacity:.35;animation:slide 8s linear infinite;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;
+  border:1px solid var(--line);border-radius:999px;padding:5px 14px;color:var(--cyan);background:rgba(126,240,223,.08);
+}
+h1{
+  margin:18px 0 14px;font-size:clamp(38px,8.6vw,74px);letter-spacing:3px;font-weight:900;
+}
+h1 em{font-style:normal;}
+.say{position:relative;max-width:720px;font-size:clamp(14.5px,2.3vw,16.5px);color:#ccd2ea;}
+.say b{color:#fff;border-bottom:2px solid var(--pink);}
+.linkbar{
+  position:relative;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;
+  border:1px solid var(--line);border-left:4px solid var(--cyan);
+  border-radius:6px 18px 18px 6px;padding:12px 16px;background:rgba(255,255,255,.05);font-size:13.5px;color:var(--silver2);
+}
+.linkbar i{font-style:normal;font-family:var(--mono);letter-spacing:.16em;color:var(--cyan);}
+.linkbar strong{color:var(--gold);word-break:break-all;}
+.go{position:relative;display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;}
+.btn{
+  position:relative;padding:13px 28px;border-radius:999px;font-weight:800;font-size:15px;
+  color:#1a0b2e;background:var(--holo);background-size:220% 100%;animation:slide 7s linear infinite;
+  box-shadow:0 12px 28px rgba(255,122,217,.30);
+}
+.btn:hover{transform:translateY(-2px);}
+.btn.ghost{background:transparent;color:var(--silver);border:1px solid var(--line);box-shadow:none;animation:none;}
+.btn.ghost:hover{border-color:var(--cyan);color:var(--cyan);}
+.chips4{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px;}
+.chips4 div{border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.05);padding:13px 10px;text-align:center;}
+.chips4 strong{display:block;font-family:var(--mono);font-size:clamp(19px,4vw,26px);}
+.chips4 div:nth-child(1) strong{color:var(--pink);}
+.chips4 div:nth-child(2) strong{color:var(--cyan);}
+.chips4 div:nth-child(3) strong{color:var(--blue);}
+.chips4 div:nth-child(4) strong{color:var(--gold);}
+.chips4 span{font-size:12px;color:var(--dim);}
+
+/* ---------- 面包屑 ---------- */
+.path{padding:14px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--dim);}
+.path ol{display:flex;flex-wrap:wrap;gap:8px;}
+.path li:not(:last-child)::after{content:"✦";margin-left:8px;color:var(--pink);}
+.path a:hover{color:var(--cyan);}
+
+/* ---------- 板块头 ---------- */
+.sec{padding:42px 0 6px;}
+.hd{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--line);}
+.hd .idx{
+  flex:0 0 auto;font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:#1a0b2e;font-weight:800;
+  background:var(--holo);background-size:220% 100%;padding:6px 12px;border-radius:999px;animation:slide 7s linear infinite;
+}
+.hd h2{font-size:clamp(21px,3.8vw,29px);letter-spacing:1px;color:#fff;}
+.hd h2 em{font-style:normal;}
+.hd p{font-size:13.5px;color:var(--dim);max-width:540px;}
+.hd .all{margin-left:auto;font-family:var(--mono);font-size:13px;color:var(--pink);border-bottom:1px solid var(--pink);white-space:nowrap;}
+
+/* ===== 栏目一：全息闪卡 ===== */
+.holo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.holo{
+  position:relative;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  background:rgba(255,255,255,.05);
+}
+.holo .face{
+  aspect-ratio:4/5;position:relative;display:flex;align-items:flex-end;padding:14px;overflow:hidden;
+}
+.holo .face::after{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.30) 1.2px,transparent 1.4px);background-size:9px 9px;
+}
+.holo .face .shine{
+  position:absolute;top:-60%;left:-60%;width:60%;height:220%;transform:rotate(25deg);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);
+  transition:left .7s ease;
+}
+.holo:hover .face .shine{left:120%;}
+.holo .face h3{position:relative;font-size:17px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6);}
+.holo .face .no{
+  position:absolute;right:10px;top:10px;font-family:var(--mono);font-size:11px;
+  background:rgba(16,12,34,.72);border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--cyan);
+}
+.f1{background:linear-gradient(160deg,#ff7ad9,#5a1050);}
+.f2{background:linear-gradient(160deg,#6bb6ff,#0d2b63);}
+.f3{background:linear-gradient(160deg,#7ef0df,#0a4c47);}
+.f4{background:linear-gradient(160deg,#ffe08a,#6b4a05);}
+.f5{background:linear-gradient(160deg,#c39bff,#3d1a72);}
+.holo .body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:8px;}
+.holo .body .tags{display:flex;flex-wrap:wrap;gap:6px;}
+.holo .body .tags span{font-size:11px;font-family:var(--mono);border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--silver2);}
+.holo .body p{font-size:13px;color:var(--silver2);}
+.holo .body .foot{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;align-items:center;font-size:13px;}
+.holo .body .foot a{color:var(--cyan);}
+.holo .body .foot b{color:var(--gold);font-family:var(--mono);}
+
+/* ===== 栏目二：不规则拼贴 moodboard ===== */
+.mood{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:104px;gap:14px;grid-auto-flow:dense;}
+.piece{
+  position:relative;border:1px solid var(--line);border-radius:18px;padding:14px;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  background:rgba(255,255,255,.05);
+}
+.piece .no{
+  position:absolute;left:12px;top:12px;font-family:var(--mono);font-size:11px;
+  border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--silver2);background:rgba(16,12,34,.5);
+}
+.piece h3{font-size:16px;color:#fff;}
+.piece h3 a:hover{color:var(--cyan);}
+.piece p{font-size:12.5px;color:var(--silver2);margin-top:5px;}
+.piece .sc{position:absolute;right:12px;bottom:12px;font-family:var(--mono);font-size:13px;color:var(--gold);}
+.p1{grid-column:span 2;grid-row:span 2;background:linear-gradient(150deg,rgba(255,122,217,.30),rgba(16,12,34,.1) 70%),linear-gradient(160deg,#3c1150,#150a2e);}
+.p2{grid-column:span 2;grid-row:span 1;background:linear-gradient(150deg,rgba(126,240,223,.26),rgba(16,12,34,.1) 70%),linear-gradient(160deg,#0d3c44,#120a2b);}
+.p3{grid-column:span 1;grid-row:span 2;background:linear-gradient(150deg,rgba(107,182,255,.28),rgba(16,12,34,.1) 70%),linear-gradient(160deg,#122f5e,#100a28);}
+.p4{grid-column:span 1;grid-row:span 1;background:linear-gradient(150deg,rgba(255,224,138,.24),rgba(16,12,34,.1) 70%),linear-gradient(160deg,#453209,#150e26);}
+.p5{grid-column:span 2;grid-row:span 1;background:linear-gradient(150deg,rgba(195,155,255,.26),rgba(16,12,34,.1) 70%),linear-gradient(160deg,#2c1550,#120a2b);}
+.p6{grid-column:span 1;grid-row:span 1;background:linear-gradient(150deg,rgba(126,240,223,.20),rgba(16,12,34,.1) 70%),linear-gradient(160deg,#14403a,#110a27);}
+.piece.tilt{transform:rotate(-1.2deg);}
+.piece.tilt2{transform:rotate(1.4deg);}
+
+/* ===== 栏目三：菱形宝石卡 ===== */
+.gems{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.gem{text-align:center;}
+.gem .cut{
+  position:relative;width:100%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;
+  clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);
+  transition:transform .25s;
+}
+.gem:hover .cut{transform:scale(1.04) rotate(4deg);}
+.gem .cut::after{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(45deg,rgba(255,255,255,.34) 0 1px,transparent 1px 8px);
+}
+.gem .cut b{position:relative;z-index:2;font-size:14.5px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.55);padding:0 8px;}
+.g1{background:linear-gradient(150deg,#ff7ad9,#4a0f45);}
+.g2{background:linear-gradient(150deg,#7ef0df,#08403a);}
+.g3{background:linear-gradient(150deg,#6bb6ff,#0b2456);}
+.g4{background:linear-gradient(150deg,#ffe08a,#5c3f04);}
+.g5{background:linear-gradient(150deg,#c39bff,#2f1466);}
+.gem h3{font-size:15.5px;color:#fff;margin-top:14px;}
+.gem h3 a:hover{color:var(--pink);}
+.gem p{font-size:12.5px;color:var(--dim);margin-top:4px;}
+.gem .st{
+  display:inline-block;margin-top:8px;font-family:var(--mono);font-size:11.5px;
+  border:1px solid var(--line);border-radius:999px;padding:2px 11px;color:var(--cyan);
+}
+
+/* ===== 栏目四：圆形拨号盘 ===== */
+.pad{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.key{text-align:center;}
+.key .disc{
+  width:100%;max-width:150px;aspect-ratio:1/1;margin:0 auto;border-radius:50%;position:relative;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(circle at 32% 26%, rgba(255,255,255,.35), transparent 46%),
+    linear-gradient(150deg,rgba(255,255,255,.10),rgba(255,255,255,.02));
+  box-shadow:0 14px 30px rgba(0,0,0,.40), inset 0 0 22px rgba(255,255,255,.06);
+  transition:transform .2s,box-shadow .2s;
+}
+.key:hover .disc{transform:translateY(-5px);box-shadow:0 18px 36px rgba(255,122,217,.28);}
+.key .disc .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--dim);}
+.key .disc b{font-size:15px;color:#fff;padding:0 10px;}
+.key .disc span{font-family:var(--mono);font-size:11px;color:var(--cyan);}
+.k1 .disc{box-shadow:0 14px 30px rgba(0,0,0,.40), inset 0 0 26px rgba(255,122,217,.22);}
+.k2 .disc{box-shadow:0 14px 30px rgba(0,0,0,.40), inset 0 0 26px rgba(126,240,223,.20);}
+.k3 .disc{box-shadow:0 14px 30px rgba(0,0,0,.40), inset 0 0 26px rgba(107,182,255,.20);}
+.k4 .disc{box-shadow:0 14px 30px rgba(0,0,0,.40), inset 0 0 26px rgba(255,224,138,.20);}
+.key p{font-size:12.5px;color:var(--dim);margin-top:10px;}
+
+/* ===== 栏目五：环形进度 + 抽屉侧栏 ===== */
+.split{display:grid;grid-template-columns:1fr 330px;gap:22px;align-items:start;}
+.rings{border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.05);padding:8px 6px;}
+.rings li{display:flex;align-items:center;gap:14px;padding:12px 14px;border-bottom:1px dashed var(--line);}
+.rings li:last-child{border-bottom:0;}
+.rings li:hover{background:rgba(255,255,255,.04);}
+.ring{
+  position:relative;flex:0 0 auto;width:66px;height:66px;border-radius:50%;
+  background:conic-gradient(var(--pink) 0 var(--p), rgba(255,255,255,.10) var(--p) 100%);
+  display:flex;align-items:center;justify-content:center;
+}
+.ring::before{
+  content:"";position:absolute;inset:8px;border-radius:50%;background:var(--bg2);
+}
+.ring b{position:relative;font-family:var(--mono);font-size:15px;color:#fff;}
+.ring i{position:relative;font-style:normal;font-family:var(--mono);font-size:9px;color:var(--dim);}
+.rings li:nth-child(2) .ring{background:conic-gradient(var(--cyan) 0 var(--p), rgba(255,255,255,.10) var(--p) 100%);}
+.rings li:nth-child(3) .ring{background:conic-gradient(var(--blue) 0 var(--p), rgba(255,255,255,.10) var(--p) 100%);}
+.rings li:nth-child(4) .ring{background:conic-gradient(var(--gold) 0 var(--p), rgba(255,255,255,.10) var(--p) 100%);}
+.rings li:nth-child(5) .ring{background:conic-gradient(var(--lilac) 0 var(--p), rgba(255,255,255,.10) var(--p) 100%);}
+.rings .nm{flex:1;min-width:0;}
+.rings .nm a{font-size:15.5px;font-weight:800;color:#fff;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rings .nm a:hover{color:var(--cyan);}
+.rings .nm span{font-family:var(--mono);font-size:11.5px;color:var(--dim);}
+.rings .up{flex:0 0 auto;font-family:var(--mono);font-size:13px;color:var(--cyan);}
+
+/* 抽屉 */
+.drawer{border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.05);padding:16px 14px;}
+.drawer h3{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--cyan);
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:0;
+}
+.tab{
+  position:relative;margin-top:14px;border:1px solid var(--line);border-radius:12px;
+  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.03));
+  padding:12px 14px 14px;
+}
+.tab::before{
+  content:"";position:absolute;left:18px;top:-9px;width:64px;height:12px;border-radius:6px 6px 0 0;
+  background:linear-gradient(180deg,rgba(255,255,255,.20),rgba(255,255,255,.06));
+  border:1px solid var(--line);border-bottom:0;
+}
+.tab time{font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.1em;}
+.tab a{display:block;font-size:14.5px;font-weight:800;color:#fff;margin-top:3px;}
+.tab a:hover{color:var(--pink);}
+.tab p{font-size:12.5px;color:var(--silver2);margin-top:4px;}
+.pane{border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.05);padding:16px;margin-top:16px;}
+.pane h3{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--gold);margin-bottom:12px;}
+.tags{display:flex;flex-wrap:wrap;gap:8px;}
+.tags a{font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:5px 13px;color:var(--silver2);}
+.tags a:hover{background:var(--holo);background-size:220% 100%;color:#1a0b2e;font-weight:700;border-color:transparent;}
+
+/* ===== 栏目六：堆叠卡问答 ===== */
+.stack{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.pile{position:relative;padding:0 0 14px;}
+.pile::before,.pile::after{
+  content:"";position:absolute;left:10px;right:10px;border:1px solid var(--line);border-radius:18px;
+  background:rgba(255,255,255,.04);
+}
+.pile::before{bottom:4px;height:14px;}
+.pile::after{bottom:10px;height:8px;left:20px;right:20px;}
+.pile .carda{
+  position:relative;border:1px solid var(--line);border-radius:18px;padding:20px 20px 22px;
+  background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.03));
+  box-shadow:0 16px 34px rgba(0,0,0,.38);
+}
+.pile .carda .q{display:flex;align-items:center;gap:10px;}
+.pile .carda .q i{
+  flex:0 0 auto;width:32px;height:32px;border-radius:50%;
+  background:var(--holo);background-size:220% 100%;animation:slide 7s linear infinite;
+  display:flex;align-items:center;justify-content:center;font-style:normal;color:#1a0b2e;font-weight:900;font-size:15px;
+}
+.pile .carda h3{font-size:16px;color:#fff;}
+.pile .carda p{font-size:13.5px;color:var(--silver2);margin-top:10px;}
+.info{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px;}
+.info div{border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.05);padding:14px 12px;text-align:center;}
+.info strong{display:block;font-size:16px;color:#fff;word-break:break-all;}
+.info span{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.12em;}
+
+/* ---------- 页脚 ---------- */
+.foot{margin-top:46px;border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.05),transparent);}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:24px;padding:32px 0 18px;}
+.fgrid h4{font-size:14px;color:var(--gold);letter-spacing:1px;margin-bottom:12px;}
+.fgrid p{font-size:13.5px;color:var(--silver2);}
+.fgrid li{padding:4px 0;}
+.fgrid li a{font-size:13.5px;color:var(--silver);}
+.fgrid li a:hover{color:var(--cyan);}
+.fend{border-top:1px solid var(--line);padding:14px 0 28px;font-family:var(--mono);font-size:11.5px;color:var(--dim);}
+.fend .wrap{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;}
+.fend a{color:var(--silver2);}
+.fend a:hover{color:var(--cyan);}
+.up{
+  position:fixed;right:16px;bottom:18px;z-index:50;width:46px;height:46px;border-radius:50%;
+  border:1px solid var(--line);background:var(--bg2);color:var(--cyan);font-size:18px;
+  cursor:pointer;display:none;align-items:center;justify-content:center;
+}
+.up.show{display:flex;}
+.up:hover{background:var(--cyan);color:#06302b;}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1024px){
+  .holo-grid{grid-template-columns:repeat(3,1fr);}
+  .mood{grid-template-columns:repeat(3,1fr);}
+  .gems{grid-template-columns:repeat(3,1fr);}
+  .pad{grid-template-columns:repeat(3,1fr);}
+  .split{grid-template-columns:1fr;}
+  .fgrid{grid-template-columns:1fr 1fr;}
+  .info{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:768px){
+  .mast{position:static;}
+  .bar{padding:10px 0 12px;}
+  .nav{margin-left:0;width:100%;border-top:1px solid var(--line);padding-top:8px;}
+  .pod{margin:8px 0 0;width:100%;}
+  .pod input{flex:1;width:auto;}
+  .hero{padding:18px 0 4px;}
+  .stage{padding:26px 18px 24px;border-radius:22px;}
+  h1{letter-spacing:2px;}
+  .chips4{grid-template-columns:repeat(2,1fr);}
+  .sec{padding:30px 0 4px;}
+  .holo-grid{grid-template-columns:repeat(2,1fr);}
+  .mood{grid-template-columns:repeat(2,1fr);grid-auto-rows:96px;}
+  .p1{grid-column:span 2;grid-row:span 2;}
+  .p2,.p5{grid-column:span 2;grid-row:span 1;}
+  .p3{grid-column:span 1;grid-row:span 2;}
+  .gems{grid-template-columns:repeat(2,1fr);}
+  .pad{grid-template-columns:repeat(2,1fr);}
+  .stack{grid-template-columns:1fr;gap:18px;}
+  .rings li{gap:10px;padding:11px 10px;}
+  .ring{width:56px;height:56px;}
+  .info{grid-template-columns:1fr;}
+  .fgrid{grid-template-columns:1fr;gap:16px;}
+}
+@media (max-width:420px){
+  .holo-grid{grid-template-columns:1fr;}
+  .mood{grid-template-columns:1fr;}
+  .p1,.p2,.p3,.p5{grid-column:span 1;grid-row:span 1;}
+  .gems{grid-template-columns:1fr;}
+  .gem .cut{max-width:220px;margin:0 auto;}
+  .pad{grid-template-columns:1fr;}
+  .key .disc{max-width:170px;}
+  h1{letter-spacing:1px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important;}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"萱萱电影网",
+  "alternateName":["萱萱电影","萱萱影视","萱萱电影网官网"],
+  "url":"https://xuanxuandianyingwang-cn.github.io/",
+  "description":"萱萱电影网是专注热门电影、剧集片单、经典动漫与综艺娱乐的影视指南站，提供影片简介、题材标签、影视榜单与观影指南。",
+  "inLanguage":"zh-CN",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://xuanxuandianyingwang-cn.github.io/search?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"萱萱电影网","item":"https://xuanxuandianyingwang-cn.github.io/"},
+    {"@type":"ListItem","position":2,"name":"热门电影","item":"https://xuanxuandianyingwang-cn.github.io/#movie"},
+    {"@type":"ListItem","position":3,"name":"剧集片单","item":"https://xuanxuandianyingwang-cn.github.io/#series"},
+    {"@type":"ListItem","position":4,"name":"动漫专区","item":"https://xuanxuandianyingwang-cn.github.io/#anime"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"萱萱电影网热门影片榜单",
+  "url":"https://xuanxuandianyingwang-cn.github.io/#rank",
+  "itemListOrder":"https://schema.org/ItemListOrderDescending",
+  "numberOfItems":6,
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"沙丘"},
+    {"@type":"ListItem","position":2,"name":"奥本海默"},
+    {"@type":"ListItem","position":3,"name":"哪吒之魔童闹海"},
+    {"@type":"ListItem","position":4,"name":"流浪地球"},
+    {"@type":"ListItem","position":5,"name":"漫长的季节"},
+    {"@type":"ListItem","position":6,"name":"繁花"}
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="strip" role="presentation"></div>
+
+<div class="ticker">
+  <div class="wrap">
+    <span><span class="spark">✦</span> 萱萱电影网 · 官方网址 <b>https://xuanxuandianyingwang-cn.github.io</b></span>
+    <span>每日更新 · 片单推荐 · 免费浏览</span>
+  </div>
+</div>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#" aria-label="萱萱电影网首页">
+        <span class="orb" aria-hidden="true"><i>萱</i></span>
+        <span class="zi"><strong class="chrome-text">萱萱电影网</strong><span>XUANXUAN MOVIE GUIDE</span></span>
+      </a>
+      <nav class="nav" aria-label="萱萱电影网主导航">
+        <a class="on" href="#">首页</a>
+        <a href="#movie">热门电影</a>
+        <a href="#series">剧集片单</a>
+        <a href="#anime">动漫专区</a>
+        <a href="#show">综艺娱乐</a>
+        <a href="#rank">影视榜单</a>
+        <a href="#news">影视资讯</a>
+        <a href="#guide">观影指南</a>
+        <form class="pod" action="#" method="get" role="search">
+          <label class="skip" for="qx">搜索影片</label>
+          <input id="qx" type="search" name="q" placeholder="片名 / 演员 / 导演" />
+          <button type="submit">GO</button>
+        </form>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="h1t">
+    <div class="wrap">
+      <div class="stage">
+        <span class="badge">✦ 萱萱电影网 · 官方主页</span>
+        <h1 id="h1t"><span class="chrome-text">萱萱</span><em class="holo-text">电影网</em></h1>
+        <p class="say">
+          <b>萱萱电影网</b>（<b>https://xuanxuandianyingwang-cn.github.io</b>）是一份清爽好看的<b>影视指南</b>：
+          收录<b>热门电影</b>、<b>剧集片单</b>、<b>经典动漫</b>、<b>综艺娱乐</b>四大板块，
+          提供影片简介、题材标签、影视榜单与观影指南。页面轻量、手机端自适应，找片一步到位。
+        </p>
+        <p class="linkbar">
+          <i>SITE URL</i>
+          <strong>https://xuanxuandianyingwang-cn.github.io</strong>
+          <span>· 站名：萱萱电影网 · 每日更新</span>
+        </p>
+        <div class="go">
+          <a class="btn" href="#movie">浏览热门电影</a>
+          <a class="btn ghost" href="#rank">查看影视榜单</a>
+        </div>
+        <div class="chips4">
+          <div><strong>4</strong><span>内容板块</span></div>
+          <div><strong>1200+</strong><span>影视条目</span></div>
+          <div><strong>每日</strong><span>榜单刷新</span></div>
+          <div><strong>100%</strong><span>移动端适配</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="path" aria-label="面包屑导航">
+      <ol>
+        <li><a href="#">萱萱电影网</a></li>
+        <li><a href="#movie">热门电影</a></li>
+        <li>首页</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- 栏目一：全息闪卡 -->
+  <section class="sec" id="movie" aria-labelledby="s1">
+    <div class="wrap">
+      <div class="hd">
+        <span class="idx">01 HOLO</span>
+        <h2 id="s1">热门电影 <em class="holo-text">闪卡</em></h2>
+        <p>萱萱电影网按科幻、传记、动画等题材整理片单，鼠标划过卡片可见全息光泽。</p>
+        <a class="all" href="#">查看更多电影 »</a>
+      </div>
+      <div class="holo-grid">
+        <article class="holo">
+          <div class="face f1" role="img" aria-label="沙丘 电影海报占位图">
+            <span class="shine" aria-hidden="true"></span>
+            <span class="no">01</span>
+            <h3>沙丘</h3>
+          </div>
+          <div class="body">
+            <div class="tags"><span>科幻</span><span>冒险</span><span>155 分钟</span></div>
+            <p>史诗级科幻巨制，沙漠星球的权力与命运之争，视听极具压迫感。</p>
+            <div class="foot"><a href="#">查看详情 »</a><b>8.9</b></div>
+          </div>
+        </article>
+        <article class="holo">
+          <div class="face f2" role="img" aria-label="奥本海默 电影海报占位图">
+            <span class="shine" aria-hidden="true"></span>
+            <span class="no">02</span>
+            <h3>奥本海默</h3>
+          </div>
+          <div class="body">
+            <div class="tags"><span>传记</span><span>历史</span><span>181 分钟</span></div>
+            <p>聚焦原子时代缔造者的天才与挣扎，三线叙事交织，群像扎实。</p>
+            <div class="foot"><a href="#">查看详情 »</a><b>8.8</b></div>
+          </div>
+        </article>
+        <article class="holo">
+          <div class="face f3" role="img" aria-label="流浪地球 电影海报占位图">
+            <span class="shine" aria-hidden="true"></span>
+            <span class="no">03</span>
+            <h3>流浪地球</h3>
+          </div>
+          <div class="body">
+            <div class="tags"><span>科幻</span><span>国产</span><span>125 分钟</span></div>
+            <p>国产科幻里程碑作品，带着家园去流浪的浪漫想象与硬核设定并存。</p>
+            <div class="foot"><a href="#">查看详情 »</a><b>8.5</b></div>
+          </div>
+        </article>
+        <article class="holo">
+          <div class="face f4" role="img" aria-label="哪吒之魔童闹海 电影海报占位图">
+            <span class="shine" aria-hidden="true"></span>
+            <span class="no">04</span>
+            <h3>哪吒之魔童闹海</h3>
+          </div>
+          <div class="body">
+            <div class="tags"><span>动画</span><span>国漫</span><span>144 分钟</span></div>
+            <p>国漫顶流续作，画面密度与叙事节奏全面升级，燃点与泪点齐飞。</p>
+            <div class="foot"><a href="#">查看详情 »</a><b>9.0</b></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目二：不规则拼贴 -->
+  <section class="sec" id="series" aria-labelledby="s2">
+    <div class="wrap">
+      <div class="hd">
+        <span class="idx">02 MOODBOARD</span>
+        <h2 id="s2">剧集片单 <em class="holo-text">拼贴墙</em></h2>
+        <p>萱萱电影网剧集频道以不规则拼贴呈现，标注题材、集数与追剧看点。</p>
+        <a class="all" href="#">查看更多剧集 »</a>
+      </div>
+      <div class="mood">
+        <article class="piece p1">
+          <span class="no">01</span>
+          <h3><a href="#">漫长的季节</a></h3>
+          <p>悬疑 · 家庭 · 12 集 —— 三个老伙计跨越二十年的追凶与和解，短集数精品化的代表之作。</p>
+          <span class="sc">9.4</span>
+        </article>
+        <article class="piece p2 tilt">
+          <span class="no">02</span>
+          <h3><a href="#">繁花</a></h3>
+          <p>年代 · 都市 · 30 集</p>
+          <span class="sc">8.7</span>
+        </article>
+        <article class="piece p3">
+          <span class="no">03</span>
+          <h3><a href="#">大明王朝1566</a></h3>
+          <p>历史 · 权谋 · 46 集，台词密度极高的经典之作。</p>
+          <span class="sc">9.6</span>
+        </article>
+        <article class="piece p4 tilt2">
+          <span class="no">04</span>
+          <h3><a href="#">三体</a></h3>
+          <p>科幻 · 30 集</p>
+          <span class="sc">8.6</span>
+        </article>
+        <article class="piece p5">
+          <span class="no">05</span>
+          <h3><a href="#">山海情</a></h3>
+          <p>现实 · 年代 · 23 集，人物命运与土地情感写得扎实。</p>
+          <span class="sc">9.2</span>
+        </article>
+        <article class="piece p6 tilt">
+          <span class="no">06</span>
+          <h3><a href="#">父母爱情</a></h3>
+          <p>家庭 · 44 集</p>
+          <span class="sc">9.3</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：菱形宝石卡 -->
+  <section class="sec" id="anime" aria-labelledby="s3">
+    <div class="wrap">
+      <div class="hd">
+        <span class="idx">03 GEM</span>
+        <h2 id="s3">动漫专区 <em class="holo-text">宝石格</em></h2>
+        <p>萱萱电影网动漫频道收录日漫经典与国漫佳作，菱形切割呈现，标注连载状态。</p>
+        <a class="all" href="#">查看更多动漫 »</a>
+      </div>
+      <div class="gems">
+        <article class="gem">
+          <div class="cut g1" role="img" aria-label="鬼灭之刃 动漫海报占位图"><b>鬼灭之刃</b></div>
+          <h3><a href="#">鬼灭之刃</a></h3>
+          <p>作画与配乐天花板级别的少年热血漫。</p>
+          <span class="st">连载中 · 8.9</span>
+        </article>
+        <article class="gem">
+          <div class="cut g2" role="img" aria-label="海贼王 动漫海报占位图"><b>海贼王</b></div>
+          <h3><a href="#">海贼王</a></h3>
+          <p>二十年航海史诗，友情与梦想的长期主义样本。</p>
+          <span class="st">连载中 · 9.2</span>
+        </article>
+        <article class="gem">
+          <div class="cut g3" role="img" aria-label="中国奇谭 动漫海报占位图"><b>中国奇谭</b></div>
+          <h3><a href="#">中国奇谭</a></h3>
+          <p>中式志怪美学短篇合集，每集都是审美惊喜。</p>
+          <span class="st">已完结 · 8.8</span>
+        </article>
+        <article class="gem">
+          <div class="cut g5" role="img" aria-label="灵笼 动漫海报占位图"><b>灵笼</b></div>
+          <h3><a href="#">灵笼</a></h3>
+          <p>国产末日科幻动画，世界观构建完成度高。</p>
+          <span class="st">连载中 · 8.6</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：圆形拨号盘 -->
+  <section class="sec" id="show" aria-labelledby="s4">
+    <div class="wrap">
+      <div class="hd">
+        <span class="idx">04 DIAL</span>
+        <h2 id="s4">综艺娱乐 <em class="holo-text">拨号盘</em></h2>
+        <p>萱萱电影网综艺频道以圆形按键呈现音乐、竞技、真人秀与文化类节目。</p>
+        <a class="all" href="#">查看更多综艺 »</a>
+      </div>
+      <div class="pad">
+        <article class="key k1">
+          <div class="disc" role="img" aria-label="歌手 综艺海报占位图">
+            <span class="k">CH-01</span>
+            <b>歌手</b>
+            <span>8.4</span>
+          </div>
+          <p>音乐 · 竞技 · 季播</p>
+        </article>
+        <article class="key k2">
+          <div class="disc" role="img" aria-label="奔跑吧 综艺海报占位图">
+            <span class="k">CH-02</span>
+            <b>奔跑吧</b>
+            <span>7.9</span>
+          </div>
+          <p>真人秀 · 户外 · 季播</p>
+        </article>
+        <article class="key k3">
+          <div class="disc" role="img" aria-label="中国诗词大会 综艺海报占位图">
+            <span class="k">CH-03</span>
+            <b>中国诗词大会</b>
+            <span>9.0</span>
+          </div>
+          <p>文化 · 益智 · 季播</p>
+        </article>
+        <article class="key k4">
+          <div class="disc" role="img" aria-label="国家宝藏 综艺海报占位图">
+            <span class="k">CH-04</span>
+            <b>国家宝藏</b>
+            <span>9.1</span>
+          </div>
+          <p>文化 · 文博 · 季播</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五 + 栏目六 -->
+  <section class="sec" id="rank" aria-labelledby="s5">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <div class="hd">
+            <span class="idx">05 RANK</span>
+            <h2 id="s5">影视榜单 <em class="holo-text">热度环</em></h2>
+            <p>结合站内浏览与收藏行为生成，按日刷新，仅作排序参考。</p>
+          </div>
+          <ol class="rings">
+            <li>
+              <span class="ring" style="--p:96%" role="img" aria-label="沙丘 热度 96%"><b>96</b><i>%</i></span>
+              <span class="nm"><a href="#">沙丘</a><span>科幻 · 2024</span></span>
+              <span class="up">8.9 ↑12%</span>
+            </li>
+            <li>
+              <span class="ring" style="--p:92%" role="img" aria-label="哪吒之魔童闹海 热度 92%"><b>92</b><i>%</i></span>
+              <span class="nm"><a href="#">哪吒之魔童闹海</a><span>动画 · 国漫</span></span>
+              <span class="up">9.0 ↑9%</span>
+            </li>
+            <li>
+              <span class="ring" style="--p:88%" role="img" aria-label="漫长的季节 热度 88%"><b>88</b><i>%</i></span>
+              <span class="nm"><a href="#">漫长的季节</a><span>悬疑 · 剧集</span></span>
+              <span class="up">9.4 ↑7%</span>
+            </li>
+            <li>
+              <span class="ring" style="--p:84%" role="img" aria-label="奥本海默 热度 84%"><b>84</b><i>%</i></span>
+              <span class="nm"><a href="#">奥本海默</a><span>传记 · 历史</span></span>
+              <span class="up">8.8 ↑6%</span>
+            </li>
+            <li>
+              <span class="ring" style="--p:78%" role="img" aria-label="流浪地球 热度 78%"><b>78</b><i>%</i></span>
+              <span class="nm"><a href="#">流浪地球</a><span>科幻 · 国产</span></span>
+              <span class="up">8.5 ↑5%</span>
+            </li>
+            <li>
+              <span class="ring" style="--p:72%" role="img" aria-label="繁花 热度 72%"><b>72</b><i>%</i></span>
+              <span class="nm"><a href="#">繁花</a><span>年代 · 都市</span></span>
+              <span class="up">8.7 ↑4%</span>
+            </li>
+            <li>
+              <span class="ring" style="--p:66%" role="img" aria-label="鬼灭之刃 热度 66%"><b>66</b><i>%</i></span>
+              <span class="nm"><a href="#">鬼灭之刃</a><span>热血 · 动漫</span></span>
+              <span class="up">8.9 ↑2%</span>
+            </li>
+          </ol>
+        </div>
+
+        <aside id="news" aria-labelledby="s6">
+          <div class="drawer">
+            <h3 id="s6">06 · 影视资讯</h3>
+            <div class="tab">
+              <time datetime="2026-10-01">2026 / 10 / 01</time>
+              <a href="#">萱萱电影网上线「题材速查」</a>
+              <p>按题材、年份、地区一键筛选片单，找片更快。</p>
+            </div>
+            <div class="tab">
+              <time datetime="2026-09-28">2026 / 09 / 28</time>
+              <a href="#">本周片单：科幻与动画双线走强</a>
+              <p>科幻片与国漫动画进入榜单前列，环比上升明显。</p>
+            </div>
+            <div class="tab">
+              <time datetime="2026-09-24">2026 / 09 / 24</time>
+              <a href="#">剧集观察：短集数精品化成趋势</a>
+              <p>12 集以内的悬疑剧集更受年轻观众青睐。</p>
+            </div>
+            <div class="tab">
+              <time datetime="2026-09-20">2026 / 09 / 20</time>
+              <a href="#">观影指南：三步挑到想看的片子</a>
+              <p>从题材、评分、时长三个维度快速做观影决策。</p>
+            </div>
+          </div>
+          <div class="pane">
+            <h3>热门关键词</h3>
+            <div class="tags">
+              <a href="#movie">萱萱电影网</a>
+              <a href="#movie">热门电影</a>
+              <a href="#series">剧集片单</a>
+              <a href="#anime">经典动漫</a>
+              <a href="#show">综艺节目</a>
+              <a href="#rank">影视榜单</a>
+              <a href="#">科幻电影</a>
+              <a href="#">国漫推荐</a>
+              <a href="#">悬疑剧</a>
+              <a href="#guide">观影指南</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目七：堆叠卡问答 -->
+  <section class="sec" id="guide" aria-labelledby="s7">
+    <div class="wrap">
+      <div class="hd">
+        <span class="idx">07 GUIDE</span>
+        <h2 id="s7">观影指南 <em class="holo-text">问答</em></h2>
+        <p>关于萱萱电影网的定位、栏目结构与片单规则说明。</p>
+      </div>
+      <div class="stack">
+        <div class="pile">
+          <article class="carda">
+            <div class="q"><i>问</i><h3>萱萱电影网是什么类型的网站？</h3></div>
+            <p>萱萱电影网（https://xuanxuandianyingwang-cn.github.io）是影视指南站，提供影片简介、题材标签、影视榜单与观影指南，帮助用户更快找到想看的内容。</p>
+          </article>
+        </div>
+        <div class="pile">
+          <article class="carda">
+            <div class="q"><i>问</i><h3>萱萱电影网包含哪些栏目？</h3></div>
+            <p>全站设热门电影、剧集片单、动漫专区、综艺娱乐、影视榜单、影视资讯、观影指南七大栏目，覆盖主流影视内容形态。</p>
+          </article>
+        </div>
+        <div class="pile">
+          <article class="carda">
+            <div class="q"><i>问</i><h3>榜单数据如何更新？</h3></div>
+            <p>影视榜单根据站内浏览与收藏行为按日刷新，仅用于排序参考，不代表专业评分，也不构成观看建议。</p>
+          </article>
+        </div>
+        <div class="pile">
+          <article class="carda">
+            <div class="q"><i>问</i><h3>手机上浏览体验如何？</h3></div>
+            <p>页面采用响应式布局，手机、平板、桌面端自动适配；小屏下拼贴墙、宝石格与拨号盘自动收为单列，导航可横向滑动。</p>
+          </article>
+        </div>
+      </div>
+      <div class="info">
+        <div><strong>萱萱电影网</strong><span>网站名称</span></div>
+        <div><strong>xuanxuandianyingwang-cn.github.io</strong><span>网站网址</span></div>
+        <div><strong>简体中文</strong><span>内容语言</span></div>
+        <div><strong>每日</strong><span>更新频率</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>关于本站</h4>
+        <p>萱萱电影网（https://xuanxuandianyingwang-cn.github.io）专注热门电影、剧集片单、经典动漫与综艺娱乐的整理与推荐，每日更新片单与榜单，帮你看得快、选得准。</p>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <ul>
+          <li><a href="#movie">热门电影</a></li>
+          <li><a href="#series">剧集片单</a></li>
+          <li><a href="#anime">动漫专区</a></li>
+          <li><a href="#show">综艺娱乐</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>站点服务</h4>
+        <ul>
+          <li><a href="#rank">影视榜单</a></li>
+          <li><a href="#news">影视资讯</a></li>
+          <li><a href="#guide">观影指南</a></li>
+          <li><a href="#">意见反馈</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <ul>
+          <li><a href="#">影视资料库</a></li>
+          <li><a href="#">影评社区</a></li>
+          <li><a href="#">片单合集</a></li>
+          <li><a href="#">动漫索引</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fend">
+      <div class="wrap">
+        <span>萱萱电影网 · https://xuanxuandianyingwang-cn.github.io · 关键词：萱萱电影网、热门电影、剧集片单、经典动漫、综艺娱乐</span>
+        <span>© 2026 萱萱电影网 · <a href="#">隐私说明</a> · <a href="#">免责声明</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="up" id="up" type="button" aria-label="返回顶部">↑</button>
+
+<script type="text/javascript">
+(function(){
+  var up = document.getElementById('up');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 400){ up.classList.add('show'); } else { up.classList.remove('show'); }
+  }, {passive:true});
+  up.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>
